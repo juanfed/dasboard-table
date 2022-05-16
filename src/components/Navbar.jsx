@@ -14,6 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 // import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import { Link } from 'react-router-dom';
 
 
 //navbar como tal
@@ -60,8 +61,9 @@ const Navbar = () => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Planificar</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Revisar</MenuItem>
+      
+     <MenuItem onClick={handleMenuClose}><Link to="/planificar">Planificar</Link></MenuItem>
+      <MenuItem onClick={handleMenuClose}><Link to="/revisar">Revisar</Link></MenuItem>
     </Menu>
   );
 
@@ -90,7 +92,7 @@ const Navbar = () => {
             sx={{ display: { xs: 'none', sm: 'block' } }}
             style={{fontWeight : "700"}}
           >
-            RROO
+            <Link to="/">RROO</Link>
           </Typography>
           
           <Box sx={{ flexGrow: 1 }} />
