@@ -16,11 +16,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MoreIcon from '@mui/icons-material/MoreVert';
 
 
-
-
-
-
-
 //navbar como tal
 
 const Navbar = () => {
@@ -31,16 +26,9 @@ const Navbar = () => {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
-  // const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
-  // const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
-  // const handleProfileMenuOpen = (event) => {
-  //   setAnchorEl(event.currentTarget);
-  // };
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
@@ -78,29 +66,6 @@ const Navbar = () => {
   );
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
-
-  // const renderMobileMenu = (
-  //   <Menu
-  //     anchorEl={mobileMoreAnchorEl}
-  //     anchorOrigin={{
-  //       vertical: 'top',
-  //       horizontal: 'right',
-  //     }}
-  //     id={mobileMenuId}
-  //     keepMounted
-  //     transformOrigin={{
-  //       vertical: 'top',
-  //       horizontal: 'right',
-  //     }}
-  //     open={isMobileMenuOpen}
-  //     onClose={handleMobileMenuClose}
-  //   >
-
-  //     <MenuItem >
-
-  //     </MenuItem>
-  //   </Menu>
-  // );
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -146,7 +111,6 @@ const Navbar = () => {
           </Box>
         </Toolbar>
       </AppBar>
-      {/* {renderMobileMenu} */}
       {renderMenu}
     </Box>
   );
